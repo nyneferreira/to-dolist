@@ -13,7 +13,7 @@
 	<version>v1.1</version>
 	<packaging>war</packaging>
 	<name>to-dolist</name>
-	<description>API de gerenciamento de tarefas</description>
+	<description>API para gerenciar tarefas</description>
 	<url/>
 	<licenses>
 		<license/>
