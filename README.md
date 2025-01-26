@@ -3,17 +3,30 @@ API de gerenciamento de tarefas.
 
 Projeto desenvolvido em Java usando o framework Spring Boot e banco de dados SQL Server. 
 
-Endpoints -- Foi usado o Postman pra chamar os endpoints.
+# Endpoints 
 
-POST localhost:8080/tarefa
+Foi usado o Postman pra chamar os endpoints.
 
-GET localhost:8080/tarefa
+POST -- responsável por acionar a ação de inserção dos dados no banco. Endereço da requisição localhost:8080/tarefa
 
-DEL localhost:8080/tarefa/id
+No body(corpo) da requisição deve-se passar os valores da tarefa da forma a seguir(formato JSON): 
+{
+    "titulo": "Tarefa 1",
+    "descricao": "Tarefa de teste",
+    "dataCriacao": "26/01/2025",
+    "status":"3"
+   }
 
-PUT localhost:8080/tarefa
+Importante destacar que o título da tarefa nunca pode estar vazio.
 
-Scripts banco
+GET -- responsável por listar todos os dados que estão cadastrados no banco. Endereço da requisição localhost:8080/tarefa. Ao executar essa requisição serão listadas todas as tarefas cadastradas no modelo JSON.
+
+DEL -- responsável por excluir uma tarefa que está cadastrada no banco, ao chamar essa requisição deve-se passar o id da tarefa a ser excluída. Endereço da requisição localhost:8080/tarefa/id.
+
+PUT -- responsável por alterar uma tarefa que está cadastrada no banco, só será possível alterar se informar um ida já existente no banco. Endereço da requisição localhost:8080/tarefa. Para executar essa requisição deve-se passar no body da requisição os dados a serem alterados da tarefa e seu id. Exemplo { "id":"1", "titulo": "Tarefa 1", "descricao": "Tarefa de teste",
+    "dataCriacao": "26/01/2025", "status":"3"}
+
+# Scripts banco
 
 create database bdtarefa;
 
