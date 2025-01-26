@@ -1,16 +1,22 @@
 # to-dolist
-API de gerenciamento de tarefas
+API de gerenciamento de tarefas.
 
 Projeto desenvolvido em Java usando o framework Spring Boot e banco de dados SQL Server. 
 
-Endpoints -- Foi usado o Postman pra chamar os endpoints 
+Endpoints -- Foi usado o Postman pra chamar os endpoints.
+
 POST localhost:8080/tarefa
+
 GET localhost:8080/tarefa
+
 DEL localhost:8080/tarefa/id
+
 PUT localhost:8080/tarefa
 
-Script banco
+Scripts banco
+
 create database bdtarefa;
+
 use bdtarefa;
 
 CREATE TABLE tarefa (
@@ -21,4 +27,4 @@ CREATE TABLE tarefa (
 	status smallint
 );
 
-Além disso, é preciso alterar o nome do servidor do SQL Server no arquivo application.properties que está dentro do parcote resources.
+Além disso, é preciso alterar o nome do servidor do SQL Server no atributo "spring.datasource.url" do arquivo application.properties que está dentro do pacote resources.
