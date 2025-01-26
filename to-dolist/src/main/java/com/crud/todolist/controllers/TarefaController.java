@@ -17,6 +17,8 @@ import com.crud.todolist.entities.Tarefa;
 import com.crud.todolist.repositories.TarefaRepository;
 import com.crud.todolist.repositories.TarefaRequest;
 
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +34,7 @@ public class TarefaController {
 
 	
 	@PostMapping
-	public ResponseEntity create (@RequestBody TarefaRequest tarefaRequest) throws ParseException {
+	public ResponseEntity create (@RequestBody @Valid TarefaRequest tarefaRequest) throws ParseException {
 		Tarefa tarefa = new Tarefa(tarefaRequest);		
 		tarefaRepository.save(tarefa);
 		return ResponseEntity.ok("Tarefa incluída com sucesso");
@@ -60,7 +62,7 @@ public class TarefaController {
 	}
 	
 	@PutMapping
-	public ResponseEntity update(@RequestBody TarefaRequest tarefaRequest) throws ParseException {
+	public ResponseEntity update(@RequestBody @Valid TarefaRequest tarefaRequest) throws ParseException {
 		Optional<Tarefa> tarefaOp = tarefaRepository.findById(tarefaRequest.id());
 		
 		if(tarefaOp.isPresent()) {

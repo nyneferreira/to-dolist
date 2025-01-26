@@ -1,4 +1,5 @@
 package com.crud.todolist.entities;
+
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

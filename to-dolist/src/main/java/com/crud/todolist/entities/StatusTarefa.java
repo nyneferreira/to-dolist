@@ -27,8 +27,7 @@ public enum StatusTarefa {
 		for(StatusTarefa atual:values()) {
 			if(atual.getValue() == id) {
 				return atual;
-			}
-			
+			} 			
 		}
 		return null;
 	}	

@@ -48,9 +48,8 @@ public class Tarefa {
 		SimpleDateFormat sdfEntrada = new SimpleDateFormat("dd/MM/yyyy");
 		Date data = sdfEntrada.parse(tarefarequest.dataCriacao());
 
-		// Converter Date para String no formato yyyy/MM/dd
-		SimpleDateFormat sdfSaida = new SimpleDateFormat("yyyy/MM/dd");
-		String dataFormatada = sdfSaida.format(data);
+//		SimpleDateFormat sdfSaida = new SimpleDateFormat("yyyy/MM/dd");
+//		String dataFormatada = sdfSaida.format(data);
 
 		this.setDataCriacao(data);
 		
