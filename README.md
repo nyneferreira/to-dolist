@@ -47,7 +47,7 @@ CREATE TABLE tarefa (
     titulo NVARCHAR(200) NOT NULL,
     descricao TEXT NULL,
     data_criacao DATETIME NOT NULL DEFAULT GETDATE(),
-	status smallint
+	status int
 );
 
 Além disso, é preciso alterar o nome do servidor do SQL Server no atributo "spring.datasource.url" do arquivo application.properties que está dentro do pacote resources.
