@@ -1,7 +1,17 @@
 # to-dolist
 API de gerenciamento de tarefas.
 
-Projeto desenvolvido em Java usando o framework Spring Boot e banco de dados SQL Server. 
+Projeto desenvolvido utilizado as seguintes tecnologias:
+
+- Java 17
+  
+- Framework Spring Boot v3.4.1
+  
+- Banco de dados SQL Server
+  
+- Servidor de aplicação Apache Tomcat v11.0
+
+- Maven 4.0
 
 # Endpoints 
 
